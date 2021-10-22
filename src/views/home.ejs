@@ -25,7 +25,7 @@
 
 
             <% data.allLinks.forEach(function(link) {%>
-                <section class="container" onclick="openUrl(' <%=link.url%> ')">
+                <section class="Container" onclick="openUrl(' <%=link.url%> ')">
                     <button class="Button">
                         <img class="imgs" src="<%-getICONpath(link.icon.iconName)%>" alt="">
                         <p><%- link.nameLink %> </p>
