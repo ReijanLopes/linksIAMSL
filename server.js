@@ -44,14 +44,15 @@ async function getAPIdata(){
 
 
 server.get('/', async (req, res) => {
-
     const data = await getAPIdata()
-
-
     res.render("home", {data})
 
 })
 
+server.get("/admin", (req,res) => {
+    res.redirect('https://linktree-ms.admin.datocms.com/')
+    }
+        )
 
 server.listen(PORT || 3001, () => {
     console.log(`Server Running on ${PORT || 3001}`);
