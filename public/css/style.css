@@ -1,0 +1,107 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    --background1: #247377;
+    --background2: #162A65;
+    --buttons: #fefefe;
+}
+
+body{
+    background-image: linear-gradient(-45deg, var(--background1), var(--background2));
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 10px;
+    background-attachment: fixed;
+    
+}
+
+.mainContainer{
+    padding: 0 20px 20px 20px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 40% auto 20px;
+    grid-template-areas: 
+    "logo"
+    "buttonContainer"
+    
+
+}
+
+
+
+.logo{
+    grid-area: logo;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding-bottom:  50px;
+    align-items: flex-end;
+}
+
+.buttonContainer{
+    grid-area: buttonContainer;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Button{
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 40px;
+    display: flex;
+    position: relative;
+    background-color: var(--buttons);
+    border-radius: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logoMS{
+    height: 150px;
+}
+
+.imgs{
+    height: 34px;
+    border-radius: 50%;
+    margin-left: 5px;
+   
+}
+
+p{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.circle{
+    height: 34px;
+    width: 34px;
+    background-color: #d5c9b9;
+    border-radius: 50%;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

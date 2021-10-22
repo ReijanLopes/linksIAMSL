@@ -1,0 +1,21 @@
+
+
+@media (max-width: 300px) {
+    .mainContainer{
+        padding: 10px;
+    }
+    .logoMS{
+        height: 130px;
+    }
+}
+
+@media (min-width: 301px) and (max-width: 420px){
+    .mainContainer{
+        grid-template-rows: 250px auto;
+        padding: 20px;
+    }
+
+    body{
+        min-height: 700px;
+    }
+}

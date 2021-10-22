@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/phone.css">
+    <script src="/js/auxiliar.js"></script>
+ 
+    <title>Monte sião</title>
+</head>
+<body>
+    
+
+
+    <section class="mainContainer">
+        <section class="logoContainer">
+            <section class="logo">
+                <img class="logoMS" src="/assets/logoMS253x150-1.png" alt="Logo monte Sião">
+            </section>
+        </section>
+        
+        <section class="buttonContainer">
+
+
+            <% data.allLinks.forEach(function(link) {%>
+                <section class="container" onclick="openUrl(' <%=link.url%> ')">
+                    <button class="Button">
+                        <img class="imgs" src="<%-getICONpath(link.icon.iconName)%>" alt="">
+                        <p><%- link.nameLink %> </p>
+                    </button>
+                </section>    
+            <%  })  %>
+        </section>
+    </section>
+
+
+<% function getICONpath(iconName){
+    switch (iconName) {
+        case "icon_app":
+
+            return  "./assets/novoapp-4.png"     
+            break;
+
+        case "youtube":
+
+            return "./assets/nonoyoutube-4.png"     
+            break;
+
+        case "instagram":
+
+            return "./assets/novoinstagram-4.png"     
+            break;
+
+        case "facebook":
+
+            return "./assets/novofacebook-4.png"     
+            break;
+
+        case "telefone":
+
+            return "./assets/novotelefone_70849.png"     
+            break;
+
+        case "whatsapp":
+
+            return "./assets/whatsapp_32x32.png"     
+            break;
+    
+        default:
+            break;
+    }
+
+
+
+}
+
+%>
+
+
+
+
+
+
+</body>
+
+</html>
