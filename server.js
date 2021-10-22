@@ -54,6 +54,6 @@ server.get('/', async (req, res) => {
 
 
 server.listen(PORT || 3001, () => {
-    console.log(`Server Running on port ${PORT || 3001}`);
+    console.log(`Server Running on ${PORT || 3001}`);
 })
 
