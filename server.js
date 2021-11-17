@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
 const axios = require('axios');
-// const { response } = require('express');
+
 
 
 const server = express();
@@ -24,7 +24,8 @@ async function getAPIdata(){
 
     const Bd = JSON.stringify({
         query: `{
-            allLinks {
+            allLinks(orderBy: number_ASC) {
+            number
             id
             nameLink
             url
@@ -41,18 +42,16 @@ async function getAPIdata(){
             return dados
     }
 
-
-
 server.get('/', async (req, res) => {
     const data = await getAPIdata()
     res.render("home", {data})
-
+    
 })
 
 server.get("/admin", (req,res) => {
     res.redirect('https://linktree-ms.admin.datocms.com/')
     }
-        )
+        ) 
 
 server.listen(PORT || 3001, () => {
     console.log(`Server Running on ${PORT || 3001}`);
